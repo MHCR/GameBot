@@ -1,4 +1,0 @@
-GameBot
-=======
-
-Hidden Game

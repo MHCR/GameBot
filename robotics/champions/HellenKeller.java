@@ -9,9 +9,13 @@ import java.net.URL;
 
 public class HellenKeller extends Champion {
 
-    public HellenKeller(String image, int speed, int health, int max, Point point) {
-        super(image, speed, health, max, point);
-
+    public HellenKeller(String image, int health, int max, Point point) {
+        super(health, max, point);
+        try {
+            this.image = ImageIO.read(new URL(image));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
